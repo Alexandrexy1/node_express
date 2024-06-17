@@ -1,0 +1,15 @@
+
+<form method="post" action="<%= url %>" class="flex flex-col gap-2">
+    <div class="flex flex-col gap-2">
+        <label for="name" class="font-semibold text-lg">Name</label>
+        <input type="text" name="checklist[name]" placeholder="Task list" value="<%= checklist.name %>" class="px-2 h-10 font-semibold border border-gray-300 w-80">
+        <% if(checklist.error && checklist.error.hasOwnProperty('_id')) { %>
+            <p class="text-red-500"><%= checklist.error.name.message %></p>
+        <% } %>
+    </div>
+    <div class="flex gap-4 font-semibold">
+        <button type="submit" class="py-2 w-20 bg-green-500 text-white hover:bg-green-600">Save</button>
+        <a href="/checklists" class="py-2 w-20 border border-gray-300 flex justify-center hover:bg-gray-200">Cancel</a>
+    </div>
+</form>
+

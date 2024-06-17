@@ -1,0 +1,9 @@
+<%- include('../layouts/header', { title: "Error page"}) %>
+<div class="text-black flex flex-col gap-4 justify-center items-center h-screen">
+    <h1 class="text-2xl font-bold"><%= error %></h1>
+    <a 
+        class="py-3 px-5 bg-gray-500 text-white font-medium rounded-lg hover:bg-sky-600 duration-500"
+        href="/">Go Back</a>
+</div>
+
+<%- include('../layouts/footer') %>
